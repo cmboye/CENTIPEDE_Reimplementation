@@ -13,7 +13,6 @@ CONS=
 GENOME=
 
 zcat ${DNASE}.bed.gz | awk '{if ($7 > 8) print}' > ${DNASE}_filtered.bed #Filter for p<1e-8 DNase peaks; note that narrowPeak uses -log10(p)
-zcat ${GENOME}.fa.gz > ${GENOME}.fa
 bedtools getfasta -fi ${GENOME}.fa -bed ${DNASE}_filtered.bed -fo > ${DNASE}_FASTA.fa #Find sequences within the regions in the peaks
 #Note: Will need to convert to MEME format if not provided
 fimo --text --parse-genomic-coord ${PWM}.meme ${DNASE}_FASTA.fa > ${DNASE}_${PWM}.fimo.txt 
