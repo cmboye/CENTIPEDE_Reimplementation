@@ -1,0 +1,22 @@
+Package: CENTIPEDE.re.implementation
+Type: Package
+Title: Reimplementation of CENTIPEDE
+Version: 1.0
+Date: 2021-12-16
+Author: Kinsey Van Deynze, Carly Boye, Mingyan Yu
+Maintainer: Who to complain to <yourfault@somewhere.net>
+Description: The package is made to use prior genetic information and experimental data to detect potential transcription binding cites. This is a re-imprelemtation of the original CENTIPEDE package. Here is a link to the original paper: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3044858/
+License: GPL (>= 3)
+Imports: 
+  edgeR, 
+  AnnotationDbi,
+  org.Hs.eg.db,
+  GenomicRanges,
+  precrec,
+  ggplot2,
+  PRROC,
+  stats,
+  utils
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.1.2
